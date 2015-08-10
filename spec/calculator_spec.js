@@ -37,13 +37,13 @@ describe("Calculator", function(){
 
 	describe("When dividing numbers", function(){
 		it("should perform division on any amount of numbers", function(){
-			expect(Calculator.divide([20, 0])).toEqual(0);
+			expect(Calculator.divide([20, 2])).toEqual(10);
 		});
 	});
 
-	describe("When an invalid argument is passed", function(){
-		it("should throw an error message", function(){
-			expect(Calculator.multiply([2, 0])).toEqual('invalid number entered');
-		});
+	it('should reset the current value', function() {
+		Calculator.reset();
+		expect(Calculator.current).toEqual(0);
 	});
+
 });

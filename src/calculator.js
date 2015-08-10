@@ -25,5 +25,8 @@ var Calculator = {
 		return nums.reduce(function(prevValue, curValue){
 			return prevValue / curValue;
 		})
+	},
+	reset : function () {
+		current = 0;
 	}
 };
